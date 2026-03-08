@@ -1,95 +1,160 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>My Muay Thai Journey</title>
-<style>
-body{
-font-family:Arial;
-background:#f4f4f4;
-text-align:center;
-margin:0;
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+export default function FighterSponsorSite() {
+  return (
+    <div className="min-h-screen bg-gray-950 text-white">
+
+      {/* HERO */}
+      <section className="max-w-6xl mx-auto px-6 py-20 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-5xl font-bold mb-4"
+        >
+          My Muay Thai Journey
+        </motion.h1>
+
+        <p className="text-xl text-gray-300">
+          Dedicated Young Muay Thai Athlete • Future Champion
+        </p>
+
+        <div className="mt-8 flex justify-center gap-4">
+          <Button className="text-lg px-6 py-5">Become a Sponsor</Button>
+          <Button variant="outline" className="text-lg px-6 py-5">View Fight Record</Button>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="max-w-5xl mx-auto px-6 pb-16">
+        <Card className="bg-gray-900 border-none rounded-2xl">
+          <CardContent className="p-8">
+            <h2 className="text-3xl font-semibold mb-4">About Me</h2>
+
+            <p className="text-gray-300 leading-relaxed">
+              I'm a passionate 12-year-old Muay Thai athlete training hard every
+              week to become a champion. I dedicate myself to improving my
+              skills, fitness, discipline, and mindset through consistent
+              training and competition.
+            </p>
+
+            <p className="text-gray-300 mt-4 leading-relaxed">
+              I'm currently looking for sponsors who want to support my journey
+              as I compete, travel to events, and represent my gym in the sport
+              I love.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* STATS */}
+      <section className="max-w-5xl mx-auto px-6 pb-16 grid md:grid-cols-3 gap-6">
+        <Card className="bg-gray-900 border-none rounded-2xl text-center">
+          <CardContent className="p-6">
+            <p className="text-gray-400">Age</p>
+            <h3 className="text-3xl font-bold">12</h3>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-gray-900 border-none rounded-2xl text-center">
+          <CardContent className="p-6">
+            <p className="text-gray-400">Fight Record</p>
+            <h3 className="text-3xl font-bold">0 - 0</h3>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-gray-900 border-none rounded-2xl text-center">
+          <CardContent className="p-6">
+            <p className="text-gray-400">Gym</p>
+            <h3 className="text-2xl font-bold">Your Gym Name</h3>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* ACHIEVEMENTS */}
+      <section className="max-w-5xl mx-auto px-6 pb-16">
+        <Card className="bg-gray-900 border-none rounded-2xl">
+          <CardContent className="p-8">
+            <h2 className="text-3xl font-semibold mb-4">Achievements</h2>
+
+            <ul className="space-y-2 text-gray-300 list-disc ml-6">
+              <li>Add your fights and results</li>
+              <li>Tournaments you have competed in</li>
+              <li>Medals or championships</li>
+              <li>Training camps or special events</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* SPONSORSHIP TIERS */}
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+        <h2 className="text-3xl font-semibold text-center mb-10">
+          Sponsorship Opportunities
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+
+          <Card className="bg-gray-900 border-none rounded-2xl">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-2">Bronze Sponsor</h3>
+              <ul className="text-gray-300 text-sm space-y-1">
+                <li>Social media shoutouts</li>
+                <li>Name listed on website</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gray-900 border-none rounded-2xl">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-2">Silver Sponsor</h3>
+              <ul className="text-gray-300 text-sm space-y-1">
+                <li>Logo on training gear</li>
+                <li>Social media promotion</li>
+                <li>Website sponsor feature</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gray-900 border-none rounded-2xl">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold mb-2">Gold Sponsor</h3>
+              <ul className="text-gray-300 text-sm space-y-1">
+                <li>Logo on fight shorts</li>
+                <li>Featured sponsor posts</li>
+                <li>Logo on website homepage</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section className="max-w-4xl mx-auto px-6 pb-24 text-center">
+        <Card className="bg-gray-900 border-none rounded-2xl">
+          <CardContent className="p-10">
+            <h2 className="text-3xl font-semibold mb-4">Become a Sponsor</h2>
+
+            <p className="text-gray-300 mb-6">
+              If you'd like to support my Muay Thai journey and help me compete,
+              travel, and grow as an athlete, please contact my
+              parent/guardian.
+            </p>
+
+            <Button className="text-lg px-8 py-6">
+              Contact for Sponsorship
+            </Button>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="text-center text-gray-500 pb-10">
+        © 2026 Muay Thai Journey
+      </footer>
+
+    </div>
+  );
 }
-
-header{
-background:black;
-color:white;
-padding:30px;
-}
-
-section{
-background:white;
-margin:20px auto;
-padding:20px;
-max-width:800px;
-border-radius:10px;
-}
-
-.sponsor{
-border:1px solid #ddd;
-padding:15px;
-margin:10px;
-border-radius:8px;
-}
-
-button{
-background:red;
-color:white;
-border:none;
-padding:12px 20px;
-border-radius:6px;
-cursor:pointer;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<h1>My Muay Thai Journey</h1>
-<p>Future Champion • Looking for Sponsors</p>
-</header>
-
-<section>
-<h2>About Me</h2>
-<p>Hi! I'm a young Muay Thai fighter training hard to become a champion.</p>
-<p>I’m currently looking for sponsors to help support my training, equipment and travel.</p>
-</section>
-
-<section>
-<h2>Achievements</h2>
-<ul>
-<li>Add your fights</li>
-<li>Add tournaments</li>
-<li>Add medals</li>
-<li>Add your gym</li>
-</ul>
-</section>
-
-<section>
-<h2>Sponsorship Packages</h2>
-
-<div class="sponsor">
-<h3>Bronze Sponsor</h3>
-<p>Social media shoutout</p>
-</div>
-
-<div class="sponsor">
-<h3>Silver Sponsor</h3>
-<p>Logo on training gear + social media</p>
-</div>
-
-<div class="sponsor">
-<h3>Gold Sponsor</h3>
-<p>Logo on fight shorts + promotion</p>
-</div>
-
-</section>
-
-<section>
-<h2>Become a Sponsor</h2>
-<p>Contact my parent/guardian to discuss sponsorship.</p>
-<button>Contact</button>
-</section>
-
-</body>
-</html>
