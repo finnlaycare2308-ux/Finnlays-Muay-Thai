@@ -4,33 +4,45 @@ import { motion } from "framer-motion";
 
 export default function FighterSponsorSite() {
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
 
-      {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 py-20 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-5xl font-bold mb-4"
-        >
-          My Muay Thai Journey
-        </motion.h1>
+      {/* HERO WITH PHOTO */}
+      <section className="relative h-[520px] flex items-center justify-center text-center">
+        <img
+          src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
 
-        <p className="text-xl text-gray-300">
-          Dedicated Young Muay Thai Athlete • Future Champion
-        </p>
+        <div className="relative z-10 max-w-3xl px-6">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl font-bold mb-4"
+          >
+            My Muay Thai Journey
+          </motion.h1>
 
-        <div className="mt-8 flex justify-center gap-4">
-          <Button className="text-lg px-6 py-5">Become a Sponsor</Button>
-          <Button variant="outline" className="text-lg px-6 py-5">View Fight Record</Button>
+          <p className="text-xl text-gray-200 mb-6">
+            Young Muay Thai Fighter • Future Champion
+          </p>
+
+          <div className="flex justify-center gap-4">
+            <Button className="text-lg px-6 py-5 bg-red-600 hover:bg-red-700">
+              Become a Sponsor
+            </Button>
+
+            <Button variant="outline" className="text-lg px-6 py-5">
+              View Fight Record
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* ABOUT */}
-      <section className="max-w-5xl mx-auto px-6 pb-16">
+      <section className="max-w-5xl mx-auto px-6 py-16">
         <Card className="bg-gray-900 border-none rounded-2xl">
           <CardContent className="p-8">
-            <h2 className="text-3xl font-semibold mb-4">About Me</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-red-400">About Me</h2>
 
             <p className="text-gray-300 leading-relaxed">
               I'm a passionate 12-year-old Muay Thai athlete training hard every
@@ -53,30 +65,54 @@ export default function FighterSponsorSite() {
         <Card className="bg-gray-900 border-none rounded-2xl text-center">
           <CardContent className="p-6">
             <p className="text-gray-400">Age</p>
-            <h3 className="text-3xl font-bold">12</h3>
+            <h3 className="text-3xl font-bold text-red-400">12</h3>
           </CardContent>
         </Card>
 
         <Card className="bg-gray-900 border-none rounded-2xl text-center">
           <CardContent className="p-6">
             <p className="text-gray-400">Fight Record</p>
-            <h3 className="text-3xl font-bold">0 - 0</h3>
+            <h3 className="text-3xl font-bold text-red-400">0 - 0</h3>
           </CardContent>
         </Card>
 
         <Card className="bg-gray-900 border-none rounded-2xl text-center">
           <CardContent className="p-6">
             <p className="text-gray-400">Gym</p>
-            <h3 className="text-2xl font-bold">Your Gym Name</h3>
+            <h3 className="text-xl font-bold text-red-400">Your Gym Name</h3>
           </CardContent>
         </Card>
+      </section>
+
+      {/* PHOTO GALLERY */}
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+        <h2 className="text-3xl font-semibold text-center mb-10 text-red-400">
+          Training Gallery
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <img
+            src="https://images.unsplash.com/photo-1517649763962-0c623066013b"
+            className="rounded-2xl object-cover h-64 w-full"
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1555597673-b21d5c935865"
+            className="rounded-2xl object-cover h-64 w-full"
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1546484959-f03c2e8a7b2c"
+            className="rounded-2xl object-cover h-64 w-full"
+          />
+        </div>
       </section>
 
       {/* ACHIEVEMENTS */}
       <section className="max-w-5xl mx-auto px-6 pb-16">
         <Card className="bg-gray-900 border-none rounded-2xl">
           <CardContent className="p-8">
-            <h2 className="text-3xl font-semibold mb-4">Achievements</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-red-400">Achievements</h2>
 
             <ul className="space-y-2 text-gray-300 list-disc ml-6">
               <li>Add your fights and results</li>
@@ -90,7 +126,7 @@ export default function FighterSponsorSite() {
 
       {/* SPONSORSHIP TIERS */}
       <section className="max-w-6xl mx-auto px-6 pb-20">
-        <h2 className="text-3xl font-semibold text-center mb-10">
+        <h2 className="text-3xl font-semibold text-center mb-10 text-red-400">
           Sponsorship Opportunities
         </h2>
 
@@ -106,7 +142,7 @@ export default function FighterSponsorSite() {
             </CardContent>
           </Card>
 
-          <Card className="bg-gray-900 border-none rounded-2xl">
+          <Card className="bg-gray-900 border-none rounded-2xl border border-red-600">
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-2">Silver Sponsor</h3>
               <ul className="text-gray-300 text-sm space-y-1">
@@ -117,7 +153,7 @@ export default function FighterSponsorSite() {
             </CardContent>
           </Card>
 
-          <Card className="bg-gray-900 border-none rounded-2xl">
+          <Card className="bg-gray-900 border-none rounded-2xl border border-yellow-500">
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-2">Gold Sponsor</h3>
               <ul className="text-gray-300 text-sm space-y-1">
@@ -135,15 +171,15 @@ export default function FighterSponsorSite() {
       <section className="max-w-4xl mx-auto px-6 pb-24 text-center">
         <Card className="bg-gray-900 border-none rounded-2xl">
           <CardContent className="p-10">
-            <h2 className="text-3xl font-semibold mb-4">Become a Sponsor</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-red-400">Become a Sponsor</h2>
 
             <p className="text-gray-300 mb-6">
               If you'd like to support my Muay Thai journey and help me compete,
-              travel, and grow as an athlete, please contact my
-              parent/guardian.
+              travel, and grow as an athlete, please contact my parent or
+              guardian.
             </p>
 
-            <Button className="text-lg px-8 py-6">
+            <Button className="text-lg px-8 py-6 bg-red-600 hover:bg-red-700">
               Contact for Sponsorship
             </Button>
           </CardContent>
